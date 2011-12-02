@@ -1,7 +1,6 @@
-<div class="container">
-    <div id="avayaIndexMain">
+<div class="wa-container">
         <!-- webalive required, WACanvas placeholder for all webalive content  -->
-    	<div id="WACanvas" style="height: auto; width: 60%;"> 
+    	<div id="WACanvas" style="height: auto; width: 100%;"> 
 	    
     	    <noscript>Javascript is required to experience web.alive. Please enable javascript support in your browser and refresh
     	    </noscript>
@@ -17,7 +16,8 @@
     		    "Language":"en","GenericParam": "?ReqAnonConn=false", "URLOverwriteAllowed": "true"
     		}
     		WAStart();
+    		$('iframe').height($('#WACanvas').width() /2);
+    	    $('iframe').width($('#WACanvas').width());
     	</script> 	
     	<!-- end webalive required -->	
-    </div>
 <div>
