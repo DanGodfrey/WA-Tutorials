@@ -1,12 +1,21 @@
 .wa-container{
-    -moz-border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -o-border-radius: 20px;
-    border-radius: 20px;
     border-style: solid;
     padding:5px;
     width:60%;
     margin:20px;
     background-color:#000;
     overflow:hidden;
+}
+
+.shadow {
+    -moz-box-shadow: 5px 5px 5px #ccc;
+    -webkit-box-shadow: 5px 5px 5px #ccc;
+    box-shadow: 5px 5px 5px #ccc;
+}
+
+.round {
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
 }
