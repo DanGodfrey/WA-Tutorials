@@ -1,23 +1,28 @@
 <div class="wa-container round shadow">
         <!-- webalive required, WACanvas placeholder for all webalive content  -->
     	<div id="WACanvas" style="height: auto; width: 100%;"> 
-	    
-    	    <noscript>Javascript is required to experience web.alive. Please enable javascript support in your browser and refresh
+    	    <noscript>
+    	        Javascript is required to experience web.alive. Please enable javascript support in your browser and refresh
     	    </noscript>
     	</div> 			
-    	<!-- webalive required (can be inline) -->
-    	<script type="text/javascript" src="http://wa2844.avayalive.com/2844/html/javascript/WAInit.js"></script> 
-    	<script language="JavaScript">	
-    	    $('#WACanvas').height($('#WACanvas').width() /2);
-    	    $('#WACanvas').width($('#WACanvas').width());  
-    	    WAUrlVars = {
-    		    "XResolution":  $('#WACanvas').width() ,
-    			"YResolution": $('#WACanvas').height(),
-    		    "Language":"en","GenericParam": "?ReqAnonConn=false", "URLOverwriteAllowed": "true"
-    		}
-    		WAStart();
-    		$('iframe').height($('#WACanvas').width() /2);
-    	    $('iframe').width($('#WACanvas').width());
-    	</script> 	
-    	<!-- end webalive required -->	
-<div>
+</div>
+<div class="tut-container round shadow">
+    
+</div>
+
+<!-- webalive required (can be inline) -->
+<script type="text/javascript" src="http://wa2844.avayalive.com/2844/html/javascript/WAInit.js"></script> 
+<script language="JavaScript">	
+    $('#WACanvas').height($('#WACanvas').width() /2);
+    $('.tut-container').height($('#WACanvas').width() /2);
+    $('#WACanvas').width($('#WACanvas').width());  
+    WAUrlVars = {
+	    "XResolution":  $('#WACanvas').width() ,
+		"YResolution": $('#WACanvas').height(),
+	    "Language":"en","GenericParam": "?ReqAnonConn=false", "URLOverwriteAllowed": "true"
+	}
+	WAStart();
+	$('iframe').height($('#WACanvas').width() /2);
+    $('iframe').width($('#WACanvas').width());
+</script> 	
+<!-- end webalive required -->
