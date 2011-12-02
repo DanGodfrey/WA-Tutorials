@@ -1,0 +1,8 @@
+.container{
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+    border-style: solid;
+    padding:75px;
+}
