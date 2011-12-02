@@ -1,0 +1,22 @@
+<div id="api">
+    <h2>In order to send commands to Web Alive, we must first create an API object from the Web Alive Client running in our browser. To do this, simply execute the following command in the javascript console:</h2>
+    <pre class="prettyprint">var api = parent.frames['webAlive'].document.getElementById("CWebPluginControl");</pre>
+</div>
+
+<script>
+    $("#api").css("margin-top",$(".tut-container").height()/2 - $("#api").height()/2);
+    var api = "";
+    function MonitorAPI(){
+        if(api == parent.frames['webAlive'].document.getElementById("CWebPluginControl")){
+            $.get('/simple-actions', function(data) {
+                $("#api").fadeOut();
+                
+                setTimeout(function(){$(".tut-container").html(data);},1000);
+            });
+        }
+        else{
+            setTimeout(function(){MonitorAPI();},3000);
+        }
+    }
+    MonitorAPI();
+</script>

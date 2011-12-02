@@ -1,0 +1,31 @@
+<div id="no-chrome">
+    <h2>
+        This tutorial will require you to use a browser with a javascript console. We highly recommend simply using Google Chrome which comes with great Dev Tools right out of the box, though other tools like Firefox's Firebug will work just as well.
+    </h2>
+    <div id="console-btns">
+        <div class="btn" id="chrome-dl">
+            <img src="/assets/chrome-logo.png" class="thumb"/>
+            <div class="btn-text">Download Chrome</div>
+        </div>
+        <div class="btn" id="no-dl">
+           <div class="btn-text">Nah, I've got this</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $("#no-chrome").css("margin-top",$(".tut-container").height()/2 - $("#no-chrome").height()/2);
+        $("#chrome-dl").css("margin-left",$(".tut-container").width()/2 - $("#chrome-dl").width());
+        $("#no-dl").click(function(){
+            $.get('/intro', function(data) {
+                $("#no-chrome").fadeOut();
+                
+                setTimeout(function(){$(".tut-container").html(data);},1000);
+            });
+        });
+        $("#chrome-dl").click(function(){
+            window.open("http://www.google.com/chrome");
+        });
+    });
+</script>

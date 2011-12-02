@@ -4,12 +4,17 @@
   <title>WA JS Tutorial</title>
   <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
   <%= stylesheet_link_tag "application" %>
+  <%= stylesheet_link_tag "prettify" %>
   <%= javascript_include_tag "jquery-1.5.2.min" %>
   <%= javascript_include_tag "date" %>
+  <%= javascript_include_tag "jquery-browser-mod" %>
+  <%= javascript_include_tag "prettify"%>
+  <%= javascript_include_tag "lang-proto"%>
   <%= javascript_include_tag "application" %>
+  
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body onload="prettyPrint()">
 
 <%= yield %>
 

@@ -1,0 +1,29 @@
+<div id="intro">
+    <h2>
+        In this tutorial, we'll be using the Chrome javascript console to interact with Web Alive via their client side API. Let's start by opening Chrome Dev Tools then clicking on the Console tab.  
+    </h2>
+
+    <h3>Windows/Linux: ctrl + shift + i</h3>
+    <h3>Mac: command + option + i</h3>
+</div>
+
+<script>
+    $("#intro").css("margin-top",$(".tut-container").height()/2 - $("#intro").height()/2);
+    
+    function MonitorDevTools(originalHeight){
+        var currHeight = $(document).height();
+        if (originalHeight == currHeight){
+            setTimeout(function(){MonitorDevTools(originalHeight);},3000);
+        }
+        else {
+            $.get('/api', function(data) {
+                $("#intro").fadeOut();
+                
+                setTimeout(function(){$(".tut-container").html(data);},1000);
+            });
+        }
+    }
+    
+    MonitorDevTools($(document).height());
+    
+</script>
