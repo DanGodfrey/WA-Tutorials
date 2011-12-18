@@ -1,5 +1,7 @@
 <div id="api">
-    <h2>In order to send commands to Web Alive, we must first create an API object from the Web Alive Client running in our browser. To do this, simply execute the following command in the javascript console:</h2>
+    <h2>Web Alive provides a Javascript client for accessing their API. This client is embedded in the DOM when the Web Alive plugin loads and can be found at:</h2>
+    <pre class="prettyprint">parent.frames['webAlive'].document.getElementById("CWebPluginControl");</pre>
+    <h2>To make our lives easier, let's extract that object from the DOM and store it in a variable. Just execute the following code in your Javascript console:</h2>
     <pre class="prettyprint">var api = parent.frames['webAlive'].document.getElementById("CWebPluginControl");</pre>
 </div>
 

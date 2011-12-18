@@ -66,3 +66,38 @@ h3 {
 pre {
     text-align:center;
 }
+
+.command-tab{
+    width:60%;
+    height:auto;
+    display:block;
+    border-radius:50px;
+    -moz-border-radius:50px;
+    -webkit-border-radius:50px;
+    -khtml-border-radius:50px;
+    font-size:20px;
+    color:#fff;
+    line-height:100px;
+    text-align:center;
+    background:#000;
+    float:left;
+}
+
+.row {
+    margin-left:0;
+}
+
+.row > [class*="span"]{
+    margin-left:0;
+}
+
+.next {
+    width:auto;
+    float:right;
+    margin-right:20px;
+}
+.prev {
+    width:auto;
+    float:left;
+    margin-left:20px;
+}

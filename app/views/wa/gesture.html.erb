@@ -1,0 +1,21 @@
+<div id="gesture">
+    <h2>Gestures can be executed using the "Do" command followed by the gesture:</h2>
+    <pre>api.wa_executeConsoleCommand("Do wave",100);</pre>
+    <h2>Supported gestures are: wave, nod, raise_hand, claphands, bow, shake_head</h2>
+    <div class="btn info next" id="hud">
+        HUD Messages >>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#gesture").css("margin-top",$(".tut-container").height()/2 - $("#gesture").height()/2);
+        $("#hud").click(function(){
+            $.get('/hud', function(data) {
+                $("#gesture").fadeOut();
+                
+                setTimeout(function(){$(".tut-container").html(data);},1000);
+            }); 
+        });
+    });
+</script>

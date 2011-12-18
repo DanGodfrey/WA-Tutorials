@@ -1,0 +1,31 @@
+<div id="toggle">
+    <h2>You can toggle various user settings on and off using the "Toggle[Setting]" command:</h2>
+    <pre>api.wa_executeConsoleCommand("ToggleBehindView",100);</pre>
+    <h2>Try toggling these other settings: MiniMapDisplay, Mute, RunByDefault, and LaserPointer </h2>
+    <div class="btn info prev" id="teleport">
+         << Teleporting
+    </div>
+    <div class="btn info next" id="location">
+         Location >>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#toggle").css("margin-top",$(".tut-container").height()/2 - $("#toggle").height()/2);
+        $("#location").click(function(){
+            $.get('/location', function(data) {
+                $("#toggle").fadeOut();
+                
+                setTimeout(function(){$(".tut-container").html(data);},1000);
+            }); 
+        });
+        $("#teleport").click(function(){
+            $.get('/teleport', function(data) {
+                $("#toggle").fadeOut();
+                
+                setTimeout(function(){$(".tut-container").html(data);},1000);
+            }); 
+        });
+    });
+</script>

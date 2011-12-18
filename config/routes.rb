@@ -6,6 +6,10 @@ match 'intro' => 'wa#intro'
 match 'no-chrome' => 'wa#no_chrome'
 match 'api' => 'wa#api'
 match 'simple-actions' => 'wa#simple_actions'
+match 'gesture' => 'wa#gesture'
+match 'hud' => 'wa#hud'
+match 'teleport' => 'wa#teleport'
+match 'toggle' => 'wa#toggle'
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
