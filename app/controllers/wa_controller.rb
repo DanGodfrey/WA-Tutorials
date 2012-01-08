@@ -1,5 +1,5 @@
 class WaController < ApplicationController 
-  layout 'application', :except => [:intro, :no_chrome, :api, :simple_actions, :gesture, :hud, :teleport, :toggle]
+  layout 'application', :except => [:intro, :no_chrome, :api, :simple_actions, :gesture, :hud, :teleport, :toggle, :location, :finish]
   def index
   end
   def intro
@@ -17,5 +17,9 @@ class WaController < ApplicationController
   def teleport
   end
   def toggle
+  end
+  def location
+  end
+  def finish
   end
 end

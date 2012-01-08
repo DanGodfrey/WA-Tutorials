@@ -10,6 +10,8 @@ match 'gesture' => 'wa#gesture'
 match 'hud' => 'wa#hud'
 match 'teleport' => 'wa#teleport'
 match 'toggle' => 'wa#toggle'
+match 'location' => 'wa#location'
+match 'finish' => 'wa#finish'
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

@@ -63,7 +63,11 @@ h3 {
     text-align:center;
 }
 
-pre {
+.justify {
+    text-align:justify;
+}
+
+.center {
     text-align:center;
 }
 
@@ -100,4 +104,11 @@ pre {
     width:auto;
     float:left;
     margin-left:20px;
+}
+
+.hidden {
+    display:none;
+}
+.left {
+    float:left;
 }
