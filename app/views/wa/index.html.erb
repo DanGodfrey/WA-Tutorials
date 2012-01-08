@@ -16,7 +16,9 @@
     $('#WACanvas').height($('#WACanvas').width() /2);
     $('.tut-container').height($('#WACanvas').width() /2);
     $('#WACanvas').width($('#WACanvas').width());  
-    $('.tut-container').width($('.tut-container').width() - 130);  
+    $('.tut-container').width($('.tut-container').width() - 130); 
+    console.log("width: " + $('#WACanvas').width()); 
+    console.log("height: " + $('#WACanvas').height()); 
     WAUrlVars = {
 	    "XResolution":  $('#WACanvas').width() ,
 		"YResolution": $('#WACanvas').height(),
