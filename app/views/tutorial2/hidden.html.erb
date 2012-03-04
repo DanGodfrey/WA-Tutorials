@@ -13,7 +13,7 @@
 <script>
     $("#hidden").css("margin-top",$(".tut-container").height()/2 - $("#hidden").height()/2);
     $("#next").click(function(){
-        $.get('/hello2', function(data) {
+        $.get('/params', function(data) {
             $("#hidden").fadeOut();  
             setTimeout(function(){$("#tut-container-content").html(data);},1000);
         });
