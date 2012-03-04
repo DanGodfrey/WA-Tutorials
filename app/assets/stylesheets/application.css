@@ -67,7 +67,8 @@ h5{
 }
 
 pre {
-    padding:0;
+    padding: 0;
+    margin-bottom: 5px;
 }
 
 video {
