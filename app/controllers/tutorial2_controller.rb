@@ -33,5 +33,8 @@ class Tutorial2Controller < ApplicationController
   
   def hidden
   end
+  
+  def params
+  end
 
 end
