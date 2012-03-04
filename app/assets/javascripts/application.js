@@ -16,6 +16,9 @@ $(document).ready(function(){
          });
          $(this).addClass("active");
          $("#tut2").removeClass("active");
+         MonitorDevTools = "";
+         MonitorAPI = "";
+         monitorAlertMeth = "";
     });
     
     $("#tut2").click(function(){
@@ -24,5 +27,8 @@ $(document).ready(function(){
          });
          $(this).addClass("active");
          $("#tut1").removeClass("active");
+         MonitorDevTools = "";
+         MonitorAPI = "";
+         monitorAlertMeth = "";
     });
 });
