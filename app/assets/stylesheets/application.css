@@ -124,6 +124,12 @@ video {
 .hidden {
     display:none;
 }
+
+#hiddenElement{
+    position:absolute;
+    bottom:25px;
+}
+
 .left {
     float:left;
 }
