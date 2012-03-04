@@ -37,4 +37,7 @@ class Tutorial2Controller < ApplicationController
   def params
   end
 
+  def roundtrip
+  end
+
 end
