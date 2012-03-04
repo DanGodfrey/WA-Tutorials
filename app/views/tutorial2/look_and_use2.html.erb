@@ -1,0 +1,26 @@
+<div id="trigger">
+    <div >
+        <h5>
+            Some possible use cases are: 
+        </h5>
+        <ol>
+            <li>When the user clicks on an object - LookAndUseTrigger</li>
+            <li>When the user's avatar collides with an object - ProximityTrigger</li>
+            <li>When the user looks at an object - StareTrigger</li>
+            <li>After an interval of time - TimerTrigger</li>
+        </ol>
+    </div>
+    <br style="clear:both;"/>
+    <div class="btn info next" id="next">
+         Next >>
+    </div>
+</div>
+<script>
+    $("#trigger").css("margin-top",$(".tut-container").height()/2 - $("#trigger").height()/2);
+    $("#next").click(function(){
+        $.get('/exercises', function(data) {
+            $("#trigger").fadeOut();  
+            setTimeout(function(){$("#tut-container-content").html(data);},1000);
+        });
+    });
+</script>

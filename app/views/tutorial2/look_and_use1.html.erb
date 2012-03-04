@@ -1,0 +1,20 @@
+<div id="trigger">
+    <div >
+        <h5 class="justify">
+            Now that we have our JavaScript trigger, we need a way of invoking it from within the Web Alive environment. How you invoke the JavaScript trigger depends on your use case, but usually it will be triggered as the result of some form of user interaction within the environment. This is done through the use of an additional trigger. The type of trigger is dependant on your use case. To have this trigger invoke your JavaScript trigger, simply set the Event parameter under the events section of the properties menu to the tag of your JavaScript trigger. 
+        </h5>
+    </div>
+    <br style="clear:both;"/>
+    <div class="btn info next" id="next">
+         Next >>
+    </div>
+</div>
+<script>
+    $("#trigger").css("margin-top",$(".tut-container").height()/2 - $("#trigger").height()/2);
+    $("#next").click(function(){
+        $.get('/look-and-use2', function(data) {
+            $("#trigger").fadeOut();  
+            setTimeout(function(){$("#tut-container-content").html(data);},1000);
+        });
+    });
+</script>

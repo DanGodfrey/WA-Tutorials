@@ -20,7 +20,7 @@
 <script>
     $("#setup").css("margin-top",$(".tut-container").height()/2 - $("#setup").height()/2);
     $("#next").click(function(){
-        $.get('/look-and-use', function(data) {
+        $.get('/look-and-use1', function(data) {
             $("#setup").fadeOut();  
             setTimeout(function(){$("#tut-container-content").html(data);},1000);
         });
