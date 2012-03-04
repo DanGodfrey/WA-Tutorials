@@ -27,6 +27,7 @@ WaTutorial::Application.routes.draw do
   match 'params' => 'tutorial2#params'
   match 'roundtrip1' => 'tutorial2#roundtrip1'
   match 'roundtrip2' => 'tutorial2#roundtrip2'
+  match 'finish2' => 'tutorial2#finish'
 
   root :to => 'tutorial1#index'
 
