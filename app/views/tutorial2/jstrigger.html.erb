@@ -1,0 +1,22 @@
+<div id="jstrigger">
+    <h2>So what exactly is a JavaScript Trigger?</h2>
+    <h5>
+        By now you have likely had experience with some of the other triggers in Web Alive such as the <strong>Look And Use Trigger</strong> or the <strong>Animation Trigger</strong>, a <strong>JavaScript Trigger</strong> falls into the same family as these; however, it is unique in the fact that it can communicate outside of the Web Alive environment itself.  
+    </h5>
+    <h5>
+        When a <strong>JavaScript Trigger</strong> is invoked, it will execute the top level JavaScript function on the page specified in the "methodName" parameter of the trigger and pass this function a set of 8 parameters which we will discuss shortly.  
+    </h5>
+    <div class="btn info next" id="next">
+         Next >>
+    </div>
+</div>
+
+<script>
+    $("#jstrigger").css("margin-top",$(".tut-container").height()/2 - $("#jstrigger").height()/2);
+    $("#next").click(function(){
+        $.get('/javascript-trigger-setup', function(data) {
+            $("#jstrigger").fadeOut();  
+            setTimeout(function(){$("#tut-container-content").html(data);},1000);
+        });
+    });
+</script>

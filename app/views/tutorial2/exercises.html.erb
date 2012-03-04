@@ -1,0 +1,16 @@
+<div id="exercises">
+    <h2>There are 7 JavaScript triggers in this environment that are invoked by 7 LookAndUse triggers setup on the 7 paintings on the left wall of the environment; however, the top level JavaScript functions that they trigger have not been written yet. Using the Chrome JavaScript console and the api object we created in Tutorial 1, we will add these functions to the page. If you do not still have your api object from Tutorial 1, create it now using the following code:</h2>
+     <pre class="center">var api = parent.frames['webAlive'].document.getElementById("CWebPluginControl");</pre>
+     <div class="btn info next" id="next">
+          Next >>
+     </div>
+</div>
+<script>
+    $("#exercises").css("margin-top",$(".tut-container").height()/2 - $("#exercises").height()/2);
+    $("#next").click(function(){
+        $.get('/hello1', function(data) {
+            $("#exercises").fadeOut();  
+            setTimeout(function(){$("#tut-container-content").html(data);},1000);
+        });
+    });
+</script>

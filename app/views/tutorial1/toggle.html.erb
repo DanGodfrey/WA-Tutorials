@@ -1,0 +1,48 @@
+<div id="toggle">
+    <h2>You can toggle various user settings on and off using the "Toggle[Setting]" command:</h2>
+    <pre class="center">api.wa_executeConsoleCommand("ToggleBehindView",3000);</pre>
+    <h2>Try toggling these other settings:</h2> 
+    <div id="toglist">
+        <div class="left">
+            <ul>
+                <li>MiniMapDisplay</li>
+                <li>Mute</li>
+            </ul>
+        </div>
+        <div class="left">
+            <ul >
+                <li>RunByDefault</li>
+                <li>LaserPointer </li>
+            </ul>
+        </div>
+        <br style="clear:both;"/>
+    </div>
+    <div class="btn info prev" id="teleport">
+         << Teleporting
+    </div>
+    <div class="btn info next" id="location">
+         Location >>
+    </div>
+    <br style="clear:both;"/>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#toggle").css("margin-top",$(".tut-container").height()/2 - $("#toggle").height()/2);
+        $("#toglist").css("margin-left",$(".tut-container").width()/2 - 110);
+        $("#location").click(function(){
+            $.get('/location', function(data) {
+                $("#toggle").fadeOut();
+                
+                setTimeout(function(){$("#tut-container-content").html(data);},1000);
+            }); 
+        });
+        $("#teleport").click(function(){
+            $.get('/teleport', function(data) {
+                $("#toggle").fadeOut();
+                
+                setTimeout(function(){$("#tut-container-content").html(data);},1000);
+            }); 
+        });
+    });
+</script>

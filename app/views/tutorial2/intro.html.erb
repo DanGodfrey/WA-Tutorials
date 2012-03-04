@@ -1,0 +1,18 @@
+<div id="intro">
+    <h2>
+        In tutorial 1 we saw how we can use JavaScript code running in our browser to trigger functionality in the Web Alive environment such as avatar gestures and HUD messages. In tutorial 2 we will take the opposite approach and have events in the Web Alive environment trigger JavaScript functions running in the user's browser through the use of Web Alive's JavaScript triggers. 
+    </h2>
+    <div class="btn info next" id="next">
+         Next >>
+    </div>
+</div>
+
+<script>
+    $("#intro").css("margin-top",$(".tut-container").height()/2 - $("#intro").height()/2);
+    $("#next").click(function(){
+        $.get('/javascript-trigger', function(data) {
+            $("#intro").fadeOut();  
+            setTimeout(function(){$("#tut-container-content").html(data);},1000);
+        });
+    });
+</script>

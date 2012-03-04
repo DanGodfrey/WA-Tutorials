@@ -1,0 +1,73 @@
+<div id="location1">
+    <h2>You can retrieve the user's current location in the environment as x,y,z coordinates using the "GetAvatarLocation" command followed by the name of your callback method:</h2>
+    <pre class="center">api.wa_executeConsoleCommand("GetAvatarLocation NameOfCallbackMethod",1000);</pre>
+
+    <div class="btn info next" id="toloc2">
+         ??Wait Callback Method??
+    </div>
+    <br style="clear:both;"/>
+</div>
+<div class="hidden" id="location2">
+    <h5>Some commands like "GetAvatarLocation" need to return data back to your Javascript code. To do this, we write a function known as a callback function that takes in the return data as a parameter and does some processing we then pass in the name of this function when we call the command so Web Alive knows what method to call when returning the data. For the "GetAvatarLocation" command, our callback function will take a single parameter called "coordinates"</h5>
+    <div class="btn info next" id="toloc3">
+         Next >>
+    </div>
+    <br style="clear:both;"/>
+</div>
+
+<div class="hidden" id="location3">
+    <h2>Let's write a callback function that will display the coordinates in an alert message:</h2>
+    <pre class="justify">
+    function alertCoordinates(coordinates){
+        alert(coordinates);
+    }
+    </pre>
+</div>
+
+<div class="hidden" id="location4">
+    <h2>Now that we have our callback function, we can call the "GetAvatarLocation" command:</h2>
+    <pre class="center">api.wa_executeConsoleCommand("GetAvatarLocation alertCoordinates",1000);</pre>
+    <div class="btn info next" id="finish">
+         Finish >>
+    </div>
+    <br style="clear:both;"/>
+</div>
+
+<script>
+    alertCoordinates = "";
+    $("#location1").css("margin-top",$(".tut-container").height()/2 - $("#location1").height()/2);
+    $("#toloc2").click(function(){
+        $("#location1").fadeOut();
+        setTimeout(function(){
+            $("#location2").fadeIn();
+            $("#location2").css("margin-top",$(".tut-container").height()/2 - $("#location2").height()/2);
+        },1000);
+        monitorAlertMeth();
+    });
+    $("#toloc3").click(function(){
+        $("#location2").fadeOut();
+        setTimeout(function(){
+            $("#location3").fadeIn();
+            $("#location3").css("margin-top",$(".tut-container").height()/2 - $("#location3").height()/2);
+        },1000);
+    });
+    function monitorAlertMeth(){
+        if (alertCoordinates){
+            $("#location3").fadeOut();
+            setTimeout(function(){
+                $("#location4").fadeIn();
+                $("#location4").css("margin-top",$(".tut-container").height()/2 - $("#location4").height()/2);
+            },1000);
+        }
+        else{
+            setTimeout(function(){monitorAlertMeth()},3000);
+        }
+    }
+    $("#finish").click(function(){
+        $.get('/finish', function(data) {
+            $("#location4").fadeOut();
+            
+            setTimeout(function(){$("#tut-container-content").html(data);},1000);
+        }); 
+    });
+</script>

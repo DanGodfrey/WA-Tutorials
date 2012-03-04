@@ -1,0 +1,31 @@
+<div id="hud">
+    <h2>You can display messages to the user in their Heads Up Display (HUD) using the "displayHUDMessage" command followed by your message:</h2>
+    <pre class="center">api.wa_executeConsoleCommand("displayHUDMessage your message",3000);</pre>
+    <div class="btn info prev" id="gesture">
+         << Gestures
+    </div>
+    <div class="btn info next" id="teleport">
+         Teleporting >>
+    </div>
+    <br style="clear:both;"/>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#hud").css("margin-top",$(".tut-container").height()/2 - $("#hud").height()/2);
+        $("#teleport").click(function(){
+            $.get('/teleport', function(data) {
+                $("#hud").fadeOut();
+                
+                setTimeout(function(){$("#tut-container-content").html(data);},1000);
+            }); 
+        });
+        $("#gesture").click(function(){
+            $.get('/gesture', function(data) {
+                $("#hud").fadeOut();
+                
+                setTimeout(function(){$("#tut-container-content").html(data);},1000);
+            }); 
+        });
+    });
+</script>

@@ -1,0 +1,30 @@
+<div id="setup">
+    <div class="dbl-col">
+        <h2>Setting up a JavaScript Trigger</h2>
+        <ol>
+            <li>Open the actor browser</li>
+            <li>From Triggers, select JavaScriptTrigger</li>
+            <li>Right-click on your map and select "Add JavaScript Trigger Here"</li>
+            <li>Open the properties menu of your newly created trigger</li>
+            <li>Under events, set the tag to a value of your choosing. This will be used to uniquely identify your trigger</li>
+            <li>Under JavaScriptTrigger, set methodName to the name of the top level JavaScript function you wish to call. Pay attention to case and trailing/leading whitespace.</li>
+            <li>Under JavaScriptTrigger, set Parameters to contain any parameters you wish to have passed to the JavaScript function. We will discuss this in detail later</li>
+        </ol>
+    </div>
+    <div class="dbl-col">
+        <video class="shadow"  src="http://culturedcode.cachefly.net/things/videos/things-ipad-teaser-001/video.m4v" controls=""  autobuffer=""></video>
+    </div>
+    <br style="clear:both;"/>
+    <div class="btn info next" id="next">
+         Next >>
+    </div>
+</div>
+<script>
+    $("#setup").css("margin-top",$(".tut-container").height()/2 - $("#setup").height()/2);
+    $("#next").click(function(){
+        $.get('/look-and-use', function(data) {
+            $("#setup").fadeOut();  
+            setTimeout(function(){$("#tut-container-content").html(data);},1000);
+        });
+    });
+</script>

@@ -1,0 +1,31 @@
+<div id="teleport">
+    <h2>You can teleport players to any teleport location using the "TeleportToLocation" command followed by the name of the teleport location:</h2>
+    <pre class="center">api.wa_executeConsoleCommand("TeleportToLocation CampFire",5000);</pre>
+    <div class="btn info prev" id="hud">
+         << HUD Messages
+    </div>
+    <div class="btn info next" id="toggle">
+         Toggles >>
+    </div>
+    <br style="clear:both;"/>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#teleport").css("margin-top",$(".tut-container").height()/2 - $("#teleport").height()/2);
+        $("#toggle").click(function(){
+            $.get('/toggle', function(data) {
+                $("#teleport").fadeOut();
+                
+                setTimeout(function(){$("#tut-container-content").html(data);},1000);
+            }); 
+        });
+        $("#hud").click(function(){
+            $.get('/hud', function(data) {
+                $("#teleport").fadeOut();
+                
+                setTimeout(function(){$("#tut-container-content").html(data);},1000);
+            }); 
+        });
+    });
+</script>

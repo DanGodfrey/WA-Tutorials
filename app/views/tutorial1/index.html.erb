@@ -1,0 +1,38 @@
+<div class="wa-container round shadow">
+        <!-- webalive required, WACanvas placeholder for all webalive content  -->
+    	<div id="WACanvas" style="height: auto; width: 100%;"> 
+    	    <noscript>
+    	        Javascript is required to experience web.alive. Please enable javascript support in your browser and refresh
+    	    </noscript>
+    	</div> 			
+</div>
+<div class="tut-container round shadow">
+    <ul class="pills">
+      <li id="tut1" class="active"><a href="#">Tutorial 1</a></li>
+      <li id="tut2" ><a href="#">Tutorial 2</a></li>
+    </ul>
+    <div id="tut-container-content">
+
+    </div>
+</div>
+
+<script type="text/javascript" src="http://wa2844.avayalive.com/2844/html/javascript/WAInit.js">
+    
+</script> 
+<script language="JavaScript">	
+    $('#WACanvas').height($('#WACanvas').width() /2);
+    $('.tut-container').height($('#WACanvas').width() /2);
+    $('#WACanvas').width($('#WACanvas').width());  
+    $('.tut-container').width($('.tut-container').width() - 130); 
+    console.log("width: " + $('#WACanvas').width()); 
+    console.log("height: " + $('#WACanvas').height()); 
+    WAUrlVars = {
+	    "XResolution":  $('#WACanvas').width() ,
+		"YResolution": $('#WACanvas').height(),
+	    "Language":"en","GenericParam": "?ReqAnonConn=false", "URLOverwriteAllowed": "true"
+	}
+	WAStart();
+	$('iframe').height($('#WACanvas').width() /2);
+    $('iframe').width($('#WACanvas').width());
+</script> 	
+<!-- end webalive required -->

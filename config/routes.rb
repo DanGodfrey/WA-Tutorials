@@ -1,69 +1,27 @@
 WaTutorial::Application.routes.draw do
-  # The priority is based upon order of creation:
-  # first created -> highest priority.
+    # The priority is based upon order of creation:
+    # first created -> highest priority.
 
-match 'intro' => 'wa#intro'
-match 'no-chrome' => 'wa#no_chrome'
-match 'api' => 'wa#api'
-match 'simple-actions' => 'wa#simple_actions'
-match 'gesture' => 'wa#gesture'
-match 'hud' => 'wa#hud'
-match 'teleport' => 'wa#teleport'
-match 'toggle' => 'wa#toggle'
-match 'location' => 'wa#location'
-match 'finish' => 'wa#finish'
+  match 'intro1' => 'tutorial1#intro'
+  match 'no-chrome' => 'tutorial1#no_chrome'
+  match 'api' => 'tutorial1#api'
+  match 'simple-actions' => 'tutorial1#simple_actions'
+  match 'gesture' => 'tutorial1#gesture'
+  match 'hud' => 'tutorial1#hud'
+  match 'teleport' => 'tutorial1#teleport'
+  match 'toggle' => 'tutorial1#toggle'
+  match 'location' => 'tutorial1#location'
+  match 'finish' => 'tutorial1#finish'
 
-  # Sample of regular route:
-  #   match 'products/:id' => 'catalog#view'
-  # Keep in mind you can assign values other than :controller and :action
+  match 'intro2' => 'tutorial2#intro'
+  match 'javascript-trigger' => 'tutorial2#jstrigger'
+  match 'javascript-trigger-setup' => 'tutorial2#jstrigger_setup'
+  match 'look-and-use' => 'tutorial2#look_and_use'
+  match 'exercises' => 'tutorial2#exercises'
+  match 'hello1' => 'tutorial2#hello1'
+  match 'hello2' => 'tutorial2#hello2'
+  match 'hello3' => 'tutorial2#hello3'
 
-  # Sample of named route:
-  #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
-  # This route can be invoked with purchase_url(:id => product.id)
+  root :to => 'tutorial1#index'
 
-  # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
-
-  # Sample resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
-
-  # Sample resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
-
-  # Sample resource route with more complex sub-resources
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', :on => :collection
-  #     end
-  #   end
-
-  # Sample resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
-
-  # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
-root :to => 'wa#index'
-
-  # See how all your routes lay out with "rake routes"
-
-  # This is a legacy wild controller route that's not recommended for RESTful applications.
-  # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id(.:format)))'
 end

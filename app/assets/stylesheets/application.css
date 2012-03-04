@@ -54,13 +54,22 @@ img{
     float:left;
 }
 
-h2{
+h2, h5{
     text-align:center;
     padding:10px;
 }
 
+h5{
+    line-height:25px;
+}
+
 h3 {
     text-align:center;
+}
+
+video {
+    width:100%;
+    margin-top:56px;
 }
 
 .justify {
@@ -69,6 +78,12 @@ h3 {
 
 .center {
     text-align:center;
+}
+
+.dbl-col {
+    width:45%;
+    float:left;
+    margin-right:5%;
 }
 
 .command-tab{
@@ -111,4 +126,8 @@ h3 {
 }
 .left {
     float:left;
+}
+
+.pills {
+    position:absolute;
 }

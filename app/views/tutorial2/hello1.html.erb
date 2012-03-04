@@ -1,0 +1,20 @@
+<div id="hello">
+    <h2>The painting with text "Hello" is configured to call the top level function helloWorld, let's write that function so that when it is called we display an alert with the text "hello world", then try clicking the painting:</h2>
+     <pre>
+        function helloWorld(){
+            alert("Hello World!");
+        }
+     </pre>
+     <div class="btn info next" id="next">
+          Next >>
+     </div>
+</div>
+<script>
+    $("#hello").css("margin-top",$(".tut-container").height()/2 - $("#hello").height()/2);
+    $("#next").click(function(){
+        $.get('/hello2', function(data) {
+            $("#hello").fadeOut();  
+            setTimeout(function(){$("#tut-container-content").html(data);},1000);
+        });
+    });
+</script>

@@ -1,0 +1,38 @@
+<div id="api1">
+    <h2>Web Alive provides a Javascript client for accessing their API. This client is embedded in the DOM when the Web Alive plugin loads and can be found at:</h2>
+    <pre class="center">parent.frames['webAlive'].document.getElementById("CWebPluginControl");</pre>
+    <div class="btn info next" id="toapi2">
+        Next >>
+    </div>
+    <br style="clear:both;"/>
+</div>
+<div id="api2" class="hidden">
+    <h2>To make our lives easier, let's extract that object from the DOM and store it in a variable. Just execute the following code in your Javascript console:</h2>
+     <pre class="center">var api = parent.frames['webAlive'].document.getElementById("CWebPluginControl");</pre>
+</div>
+
+
+
+<script>
+    $("#api1").css("margin-top",$(".tut-container").height()/2 - $("#api1").height()/2);
+    var api = "";
+    function MonitorAPI(){
+        if(api == parent.frames['webAlive'].document.getElementById("CWebPluginControl")){
+            $.get('/simple-actions', function(data) {
+                $("#api2").fadeOut();  
+                setTimeout(function(){$("#tut-container-content").html(data);},1000);
+            });
+        }
+        else{
+            setTimeout(function(){MonitorAPI();},3000);
+        }
+    }
+    MonitorAPI();
+    $("#toapi2").click(function(){
+        $("#api1").fadeOut();
+        setTimeout(function(){
+            $("#api2").fadeIn();
+              $("#api2").css("margin-top",$(".tut-container").height()/2 - $("#api2").height()/2);
+        },1000);
+    });
+</script>
