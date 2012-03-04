@@ -1,10 +1,7 @@
 <div id="hello">
-    <h2>Now let's modify our helloWorld function to include the user's avatar name:</h2>
-     <pre>
-        function helloWorld(params, id, name){
-            alert("Hello " + name + "!");
-        }
-     </pre>
+    <h5>
+        By now you should have noticed that our initial helloWorld function did not take in any parameters. In JavaScript, if a function takes in X parameters and Y parameters are passed in such that Y > X only the first X parameters will be passed to the function. The opposite is also true, if Y parameters are passed such that Y < X only the first Y parameters will be passed and the remaining parameters will be undefined. Therefore, if we only want the 3rd parameter (pawnName) our function must take in at least 3 parameters and we can choose to ignore the first 2 if need be. For details on the remaining 5 parameters, see the official Web Alive <a href="http://wiki.avayalive.com/wiki/7/4_Triggers">documentation</a>. 
+    </h5>
      <div class="btn info next" id="next">
           Next >>
      </div>
@@ -12,9 +9,10 @@
 <script>
     $("#hello").css("margin-top",$(".tut-container").height()/2 - $("#hello").height()/2);
     $("#next").click(function(){
-        $.get('/hello2', function(data) {
+        $.get('/hello4', function(data) {
             $("#hello").fadeOut();  
             setTimeout(function(){$("#tut-container-content").html(data);},1000);
         });
     });
 </script>
+

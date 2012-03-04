@@ -27,5 +27,8 @@ class Tutorial2Controller < ApplicationController
   
   def hello3
   end
+  
+  def hello4
+  end
 
 end
