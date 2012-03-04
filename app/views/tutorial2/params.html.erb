@@ -1,5 +1,5 @@
 <div id="params">
-    <h5>So far all of the examples we have seen have not used the Parameters field of the JavaScript trigger. By leveraging this field, we can have our triggers pass in custom parameters. For example, the three middle paintings all invoke a JavaScript trigger which calls the "doGesture" function; however, each passes the function a different gesture name in the parameters string. Let's write the "doGesture" function as follows:</h5>
+    <h5>So far all of the examples we have seen have not used the Parameters field of the JavaScript trigger. By leveraging this field, our triggers can pass in custom parameters. The three middle paintings all invoke a JavaScript trigger which calls the "doGesture" function; however, each passes the function a different gesture name in the parameters string. Let's write the "doGesture" function as follows:</h5>
      <pre>
         function doGesture(gesture){
             api.wa_executeConsoleCommand("Do " + gesture, 5000);
