@@ -1,16 +1,16 @@
 <div id="hidden">
      <pre>
-        var hasPressedA = false; 
-        function pressButton(button){
-            if (button == "A"){
-                hasPressedA = true;
-                api.wa_executeConsoleCommand("displayHUDMessage you pressed A",3000);
-            } else if (button == "B" AND hasPressedA){
-                api.wa_executeConsoleCommand("displayHUDMessage you pressed B",3000);
-            } else {
-                api.wa_executeConsoleCommand("displayHUDMessage you pressed an invalid button",3000);
-            }
-        }
+var hasPressedA = false; 
+function pressButton(button){
+    if (button == "A"){
+        hasPressedA = true;
+        api.wa_executeConsoleCommand("displayHUDMessage you pressed A",3000);
+    } else if (button == "B" &amp&amp hasPressedA){
+        api.wa_executeConsoleCommand("displayHUDMessage you pressed B",3000);
+    } else {
+        api.wa_executeConsoleCommand("displayHUDMessage you pressed an invalid button",3000);
+    }
+}
      </pre>
      <div class="btn info next" id="next">
           Next >>
