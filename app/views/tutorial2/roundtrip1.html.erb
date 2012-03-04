@@ -1,0 +1,15 @@
+<div id="rt">
+    <h5>Some times it is useful to record whether or not a user has invoked a given JavaScript trigger. For example, we may not want to let the user press button B until they have pressed button A. Both button A and B invoke JavaScript triggers which call the function pressButton; however each passes its letter as a param. :</h5>
+     <div class="btn info next" id="next">
+          Next >>
+     </div>
+</div>
+<script>
+    $("#rt").css("margin-top",$(".tut-container").height()/2 - $("#rt").height()/2);
+    $("#next").click(function(){
+        $.get('/roundtrip2', function(data) {
+            $("#rt").fadeOut();  
+            setTimeout(function(){$("#tut-container-content").html(data);},1000);
+        });
+    });
+</script>

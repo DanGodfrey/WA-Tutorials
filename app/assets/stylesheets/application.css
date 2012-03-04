@@ -66,6 +66,10 @@ h5{
     line-height:25px;
 }
 
+pre {
+    padding:0;
+}
+
 video {
     width:100%;
     margin-top:56px;

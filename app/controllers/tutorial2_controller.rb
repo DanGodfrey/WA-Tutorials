@@ -1,5 +1,5 @@
 class Tutorial2Controller < ApplicationController 
-  layout 'application', :except => [:intro, :jstrigger, :jstrigger_setup, :look_and_use1, :look_and_use2, :exercises, :hello1, :hello2, :hello3, :hello4, :hidden, :params, :roundtrip]
+  layout 'application', :except => [:intro, :jstrigger, :jstrigger_setup, :look_and_use1, :look_and_use2, :exercises, :hello1, :hello2, :hello3, :hello4, :hidden, :params, :roundtrip1, :roundtrip2]
 
   def intro
   end
@@ -37,7 +37,10 @@ class Tutorial2Controller < ApplicationController
   def params
   end
 
-  def roundtrip
+  def roundtrip1
+  end
+  
+  def roundtrip2
   end
 
 end

@@ -12,7 +12,7 @@
 <script>
     $("#params").css("margin-top",$(".tut-container").height()/2 - $("#params").height()/2);
     $("#next").click(function(){
-        $.get('/roundtrip', function(data) {
+        $.get('/roundtrip1', function(data) {
             $("#params").fadeOut();  
             setTimeout(function(){$("#tut-container-content").html(data);},1000);
         });
