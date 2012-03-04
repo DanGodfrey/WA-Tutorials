@@ -1,5 +1,5 @@
 <div id="hello">
-    <h2>Now let's modify our helloWorld function to include the user's avatar name:</h2>
+    <h4>Now let's modify our helloWorld function to include the user's avatar name:</h4>
      <pre>
         function helloWorld(params, id, name){
             alert("Hello " + name + "!");
@@ -12,7 +12,7 @@
 <script>
     $("#hello").css("margin-top",$(".tut-container").height()/2 - $("#hello").height()/2);
     $("#next").click(function(){
-        $.get('/hello2', function(data) {
+        $.get('/hidden', function(data) {
             $("#hello").fadeOut();  
             setTimeout(function(){$("#tut-container-content").html(data);},1000);
         });

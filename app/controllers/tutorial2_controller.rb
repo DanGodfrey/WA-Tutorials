@@ -1,5 +1,5 @@
 class Tutorial2Controller < ApplicationController 
-  layout 'application', :except => [:intro, :jstrigger, :jstrigger_setup, :look_and_use1, :look_and_use2, :exercises, :hello1, :hello2, :hello3, :hello4]
+  layout 'application', :except => [:intro, :jstrigger, :jstrigger_setup, :look_and_use1, :look_and_use2, :exercises, :hello1, :hello2, :hello3, :hello4, :hidden]
 
   def intro
   end
@@ -29,6 +29,9 @@ class Tutorial2Controller < ApplicationController
   end
   
   def hello4
+  end
+  
+  def hidden
   end
 
 end

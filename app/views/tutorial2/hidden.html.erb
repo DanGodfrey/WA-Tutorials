@@ -1,0 +1,20 @@
+<div id="hidden">
+    <h5>One common use of JavaScript triggers, is to modify the content of the page based on the current context of the environment. The painting with text "show" invokes a JavaScript trigger which calls the showHidden function. Let's write that function so that when called it shows a hidden element with id "hiddenElement":</h5>
+     <pre>
+        function showHidden(){
+            $("#hiddenElement").show();
+        }
+     </pre>
+     <div class="btn info next" id="next">
+          Next >>
+     </div>
+</div>
+<script>
+    $("#hidden").css("margin-top",$(".tut-container").height()/2 - $("#hidden").height()/2);
+    $("#next").click(function(){
+        $.get('/hello2', function(data) {
+            $("#hidden").fadeOut();  
+            setTimeout(function(){$("#tut-container-content").html(data);},1000);
+        });
+    });
+</script>
